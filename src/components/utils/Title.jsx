@@ -3,10 +3,10 @@ import React from 'react';
 const Title = ({ title }) => {
   return (
     <>
-      <div className="gtid item-center">
+      <div className="grid item-center">
         <h1
           className="text-5xl lg:text-4xl md:text-3xl font-bold text-slate-900 filter
-         drop-shadow-lg">
+          drop-shadow-lg">
           {title}
         </h1>
       </div>
