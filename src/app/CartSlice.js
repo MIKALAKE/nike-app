@@ -3,7 +3,9 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   cartState: false,
-  cartItems: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
+  cartItems: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [],
+  cartTotalAmount: 0,
+  cartTotalQty: 0
 };
 
 const CartSlice = createSlice({
@@ -70,6 +72,26 @@ const CartSlice = createSlice({
       state.cartItems = [];
       toast.success('Cart Cleared');
       localStorage.setItem('cart', JSON.stringify(state.cartItems));
+    },
+
+    setGetTotals: (state, action) => {
+      let { totalAmount, totalQty } = state.cartItems.reduce(
+        (cartTotal, cartItem) => {
+          const { price, cartQuantity } = cartItem;
+          const totalPrice = price * cartQuantity;
+
+          cartTotal.totalAmount += totalPrice;
+          cartTotal.totalQty += cartQuantity;
+
+          return cartTotal;
+        },
+        {
+          totalAmount: 0,
+          totalQty: 0
+        }
+      );
+      state.cartTotalAmount = totalAmount;
+      state.cartTotalQty = totalQty;
     }
   }
 });
@@ -79,12 +101,15 @@ export const {
   setClearCartItems,
   setCloseCart,
   setDecreseItemQty,
+  setGetTotals,
   setIncreseItemQty,
   setOpenCart,
   setRemoveItemFromCart
 } = CartSlice.actions;
 
-export const selectCartState = state => state.cart.cartState;
 export const selectCartItems = state => state.cart.cartItems;
+export const selectCartState = state => state.cart.cartState;
+export const selectTotalAmount = state => state.cart.cartTotalAmount;
+export const selectTotalQty = state => state.cart.cartTotalQty;
 
 export default CartSlice.reducer;

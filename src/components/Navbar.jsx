@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { HeartIcon, MagnifyingGlassIcon, ShoppingBagIcon } from '@heroicons/react/24/outline';
 
 import logo from '../assets/logo.png';
-import { setOpenCart } from '../app/CartSlice';
-import { selectCartItems } from '../app/CartSlice';
+import { selectTotalQty, setOpenCart } from '../app/CartSlice';
 
 const Navbar = () => {
   const dispatch = useDispatch();
+  const totalQty = useSelector(selectTotalQty);
   const [navState, setNavState] = useState(false);
-  const cartItems = useSelector(selectCartItems);
 
+  console.log(totalQty);
   const onCartToggle = () => {
     dispatch(
       setOpenCart({
@@ -68,7 +68,7 @@ const Navbar = () => {
                       ? 'bg-slate-900 text-slate-900 shadow-slate-900'
                       : 'bg-slate-100 text-slate-900 shadow-slate-100'
                   }`}>
-                  {cartItems.length}
+                  {totalQty}
                 </div>
               </button>
             </li>
