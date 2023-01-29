@@ -1,7 +1,25 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { StarIcon, ShoppingBagIcon } from '@heroicons/react/24/solid';
 
+import { setAddCartItem, setOpenCart } from '../../app/CartSlice';
+
 const Items = ({ ifExists, id, color, shadow, title, text, img, btn, rating, price }) => {
+  const dispatch = useDispatch();
+
+  const onAddToCart = () => {
+    const item = { id, title, text, img, color, shadow, price };
+    dispatch(setAddCartItem(item));
+  };
+
+  const onCartToggle = () => {
+    dispatch(
+      setOpenCart({
+        cartState: true
+      })
+    );
+  };
+
   return (
     <>
       <div
@@ -21,10 +39,17 @@ const Items = ({ ifExists, id, color, shadow, title, text, img, btn, rating, pri
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <button type="button" className="bg-white/90 blur-effect-theme button-theme p-0.5 shadow shadow-sky-200">
+            <button
+              onClick={() => onAddToCart()}
+              type="button"
+              className="bg-white/90 blur-effect-theme button-theme p-0.5 shadow shadow-sky-200">
               <ShoppingBagIcon className="icon-style text-slate-900" />
             </button>
             <button
+              onClick={() => {
+                onAddToCart();
+                onCartToggle();
+              }}
               type="button"
               className="bg-white/90 blur-effect-theme button-theme px-2 py-1 shadow shadow-sky-200 text-sm text-black">
               {btn}
