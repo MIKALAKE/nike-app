@@ -5,7 +5,7 @@ import { ClockIcon } from '@heroicons/react/24/outline';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { HeartIcon, HashtagIcon } from '@heroicons/react/24/solid';
 
-import Title from './utils/Title';
+import Title from '../utils/Title';
 
 const Stories = ({ story: { title, news } }) => {
   const splideOptions = {

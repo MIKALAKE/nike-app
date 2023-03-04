@@ -1,11 +1,17 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import CartItem from './cart/CartItem';
-import CartCount from './cart/CartCount';
-import CartEmpty from './cart/CartEmpty';
-import { selectCartState, selectCartItems } from '../app/CartSlice';
-import { selectTotalAmount, selectTotalQty, setCloseCart, setGetTotals } from '../app/CartSlice';
+import {
+  selectCartItems,
+  selectCartState,
+  selectTotalAmount,
+  selectTotalQty,
+  setCloseCart,
+  setGetTotals
+} from '../../process/app/CartSlice';
+import CartItem from './subviews/CartItem';
+import CartCount from './subviews/CartCount';
+import CartEmpty from './subviews/CartEmpty';
 
 const Cart = () => {
   const cartItems = useSelector(selectCartItems);

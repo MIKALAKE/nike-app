@@ -1,6 +1,7 @@
 import React from 'react';
-import emptybag from '../../assets/emptybag.png';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
+
+import emptybag from '../../../show/assets/static/icons/emptybag.png';
 
 const CartEmpty = ({ onCartToggle }) => {
   return (

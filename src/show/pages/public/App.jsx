@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Cart, FlexContent, Footer, Hero, Navbar, Sales, Stories } from './components';
-import { footerAPI, heroapi, highlight, popularsales, sneaker, story, toprateslaes } from './data/data';
+import { Cart, FlexContent, Footer, Hero, Navbar, Sales, Stories } from '../../../components';
+import { footerAPI, heroapi, highlight, popularsales, sneaker, story, toprateslaes } from '../../../process/data/data';
 
 const App = () => {
   return (
