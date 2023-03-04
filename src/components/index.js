@@ -1,7 +1,9 @@
-export { default as Hero } from './Hero';
-export { default as Cart } from './Cart';
-export { default as Sales } from './Sales';
-export { default as Footer } from './Footer';
-export { default as Navbar } from './Navbar';
-export { default as Stories } from './Stories';
-export { default as FlexContent } from './FlexContent';
+import Hero from './Hero';
+import Cart from './Cart';
+import Sales from './Sales';
+import Footer from './Footer';
+import Navbar from './Navbar';
+import Stories from './Stories';
+import FlexContent from './FlexContent';
+
+export { Cart, FlexContent, Footer, Hero, Navbar, Sales, Stories };

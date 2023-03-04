@@ -1,6 +1,7 @@
 import React from 'react';
-import Items from './utils/Items';
-import Title from './utils/Title';
+
+import Items from '../utils/Items';
+import Title from '../utils/Title';
 
 const Sales = ({ ifExists, sales: { title, items } }) => {
   return (

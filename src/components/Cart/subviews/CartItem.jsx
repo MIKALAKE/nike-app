@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { MinusIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/outline';
 
-import { setDecreseItemQty, setIncreseItemQty, setRemoveItemFromCart } from '../../app/CartSlice';
+import { setDecreseItemQty, setIncreseItemQty, setRemoveItemFromCart } from '../../../process/app/CartSlice';
 
 const CartItem = ({ item: { id, title, text, img, color, shadow, price, cartQuantity } }) => {
   const dispatch = useDispatch();

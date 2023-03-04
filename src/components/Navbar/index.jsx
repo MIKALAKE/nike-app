@@ -2,15 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { HeartIcon, MagnifyingGlassIcon, ShoppingBagIcon } from '@heroicons/react/24/outline';
 
-import logo from '../assets/logo.png';
-import { selectTotalQty, setOpenCart } from '../app/CartSlice';
+import logo from '../../show/assets/static/icons/logo.png';
+import { selectTotalQty, setOpenCart } from '../../process/app/CartSlice';
 
 const Navbar = () => {
   const dispatch = useDispatch();
   const totalQty = useSelector(selectTotalQty);
   const [navState, setNavState] = useState(false);
 
-  console.log(totalQty);
   const onCartToggle = () => {
     dispatch(
       setOpenCart({

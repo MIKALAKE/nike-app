@@ -1,35 +1,35 @@
-import heroimg from '../assets/hero.png';
+import heroimg from '../../show/assets/static/images/hero.png';
 
-import sneakershoe from '../assets/sneaker.png';
-import hightlightimg from '../assets/hightlightimg.png';
+import sneakershoe from '../../show/assets/static/images/sneaker.png';
+import hightlightimg from '../../show/assets/static/images/hightlightimg.png';
 
-import clip from '../assets/video/clip.mp4';
-import vcover1 from '../assets/video/vcover1.png';
-import vcover2 from '../assets/video/vcover2.png';
-import vcover3 from '../assets/video/vcover3.png';
+import clip from '../../show/assets/video/clip.mp4';
+import vcover1 from '../../show/assets/video/vcover1.png';
+import vcover2 from '../../show/assets/video/vcover2.png';
+import vcover3 from '../../show/assets/video/vcover3.png';
 
-import psale1 from '../assets/nike-air-red.png';
-import psale2 from '../assets/nike-adapt-bb.png';
-import psale3 from '../assets/nike-adapt-bb-smart.png';
+import psale1 from '../../show/assets/static/images/nike-air-red.png';
+import psale2 from '../../show/assets/static/images/nike-adapt-bb.png';
+import psale3 from '../../show/assets/static/images/nike-adapt-bb-smart.png';
 
-import product1 from '../assets/product1.png';
-import product2 from '../assets/product2.png';
-import product3 from '../assets/product3.png';
-import product4 from '../assets/product4.png';
-import product5 from '../assets/product5.png';
-import product6 from '../assets/product6.png';
-import product7 from '../assets/product7.png';
-import product8 from '../assets/product8.png';
-import product9 from '../assets/product9.png';
-import product10 from '../assets/product10.png';
-import product11 from '../assets/product11.png';
-import product12 from '../assets/product12.png';
+import product1 from '../../show/assets/static/images/product1.png';
+import product2 from '../../show/assets/static/images/product2.png';
+import product3 from '../../show/assets/static/images/product3.png';
+import product4 from '../../show/assets/static/images/product4.png';
+import product5 from '../../show/assets/static/images/product5.png';
+import product6 from '../../show/assets/static/images/product6.png';
+import product7 from '../../show/assets/static/images/product7.png';
+import product8 from '../../show/assets/static/images/product8.png';
+import product9 from '../../show/assets/static/images/product9.png';
+import product10 from '../../show/assets/static/images/product10.png';
+import product11 from '../../show/assets/static/images/product11.png';
+import product12 from '../../show/assets/static/images/product12.png';
 
-import twitter from '../assets/twitter.svg';
-import youtube from '../assets/youtube.svg';
-import facebook from '../assets/facebook.svg';
-import instagram from '../assets/instagram.svg';
-import messenger from '../assets/messenger.svg';
+import twitter from '../../show/assets/static/icons/twitter.svg';
+import youtube from '../../show/assets/static/icons/youtube.svg';
+import facebook from '../../show/assets/static/icons/facebook.svg';
+import instagram from '../../show/assets/static/icons/instagram.svg';
+import messenger from '../../show/assets/static/icons/messenger.svg';
 
 const heroapi = {
   title: 'Play With Electric Nike',
